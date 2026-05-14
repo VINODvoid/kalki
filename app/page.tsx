@@ -1,5 +1,3 @@
-import React from "react";
-
 export default function Home() {
   return (
     <>
@@ -237,7 +235,7 @@ export default function Home() {
       <section id="interests">
         <h2>Interests</h2>
         <p>
-          Beyond engineering, I am interested in philosophy, personal finance,
+          Beyond engineering, I am interested in philosophy, global politics,
           and gaming. I also enjoy exploring the anime, as well as staying
           active through long walks.
         </p>
