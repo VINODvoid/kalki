@@ -232,6 +232,36 @@ export default function Home() {
           </li>
         </ul>
       </section>
+      <section id="writing">
+        <h2>Writing</h2>
+        <ul>
+          <li>
+            <div className="item-title">
+              <a
+                href="https://kalki.bearblog.dev/1/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                I Built a Voice AI System From Scratch. The Hard Part Wasn&apos;t the AI.
+              </a>
+            </div>
+            <div className="item-meta">May 2026</div>
+            <p>
+              Building Rex, a voice-driven AI daemon for local machines — and discovering that the real challenge wasn&apos;t the model, it was latency.
+            </p>
+          </li>
+        </ul>
+        <p style={{ marginTop: "0.5rem" }}>
+          <a
+            href="https://kalki.bearblog.dev/blog/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            All posts →
+          </a>
+        </p>
+      </section>
+
       <section id="interests">
         <h2>Interests</h2>
         <p>
