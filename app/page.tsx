@@ -238,6 +238,21 @@ export default function Home() {
           <li>
             <div className="item-title">
               <a
+                href="https://kalki.bearblog.dev/2/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                I Was Already Using Rust. I Just Didn&apos;t Know It Yet.
+              </a>
+            </div>
+            <div className="item-meta">May 2026</div>
+            <p>
+              Discovering Rust through everyday tools — ripgrep, fd, bat, starship — and then committing to learn it properly.
+            </p>
+          </li>
+          <li>
+            <div className="item-title">
+              <a
                 href="https://kalki.bearblog.dev/1/"
                 target="_blank"
                 rel="noopener noreferrer"
