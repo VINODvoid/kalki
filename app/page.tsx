@@ -278,7 +278,7 @@ export default function Home() {
               Focused on Core Computer Science: Data Structures, Algorithms,
               Systems, and Machine Learning.
               <a
-                href="https://brindavancollege.com/"
+                href="https://engineering.brindavancollege.edu.in/"
                 target="_blank"
                 style={{ marginLeft: "0.5rem", fontSize: "0.85rem" }}
               >
