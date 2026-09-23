@@ -227,6 +227,21 @@ export default function Home() {
           <li>
             <div className="item-title">
               <a
+                href="https://kalki.bearblog.dev/3/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                More Capacity, Worse Fit
+              </a>
+            </div>
+            <div className="item-meta">September 2026</div>
+            <p>
+              Rebuilding the 1986 family tree network experiment and finding that a narrower model trains better than a wider one — bottlenecks as inductive bias, not just constraint.
+            </p>
+          </li>
+          <li>
+            <div className="item-title">
+              <a
                 href="https://kalki.bearblog.dev/2/"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -237,21 +252,6 @@ export default function Home() {
             <div className="item-meta">May 2026</div>
             <p>
               Discovering Rust through everyday tools — ripgrep, fd, bat, starship — and then committing to learn it properly.
-            </p>
-          </li>
-          <li>
-            <div className="item-title">
-              <a
-                href="https://kalki.bearblog.dev/1/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                I Built a Voice AI System From Scratch. The Hard Part Wasn&apos;t the AI.
-              </a>
-            </div>
-            <div className="item-meta">May 2026</div>
-            <p>
-              Building Rex, a voice-driven AI daemon for local machines — and discovering that the real challenge wasn&apos;t the model, it was latency.
             </p>
           </li>
         </ul>
