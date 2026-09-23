@@ -3,8 +3,8 @@ export default function Home() {
     <>
       <header>
         <h1>
-          Vinod <span style={{ fontWeight: 400, opacity: 0.8 }}>"Kalki"</span>{" "}
-          Varadaram
+          Vinod <span style={{ fontWeight: 400, opacity: 0.8 }}>&quot;Kalki&quot;</span>{" "}
+          Vardaram
         </h1>
         <p className="item-meta">Software Engineer • Bangalore, IN</p>
         <div className="links-list">
@@ -30,7 +30,7 @@ export default function Home() {
           >
             Twitter/X
           </a>
-          <a href="/Vinod_Varadaram_Resume.pdf" target="_blank">
+          <a href="/Vinod_Vardaram_Resume.pdf" target="_blank">
             Resume (PDF)
           </a>
         </div>
@@ -39,17 +39,10 @@ export default function Home() {
       <section id="about">
         <h2>About</h2>
         <p>
-          I am a software engineer focused on building simple, efficient, and
-          scalable systems. My expertise spans full-stack development, AI agent
-          orchestration, and blockchain systems.
-        </p>
-      </section>
-
-      <section id="now">
-        <h2>Now</h2>
-        <p>
-          Currently, I am contributing to Osprey and deepening my expertise in
-          Artificial Intelligence and machine learning architectures.
+          I&apos;m a software engineer in Bangalore. I build backend systems:
+          queues, workers, webhooks, the parts that have to keep running. Since
+          Aug 2025 I&apos;ve been working independently on my own projects and
+          open source.
         </p>
       </section>
 
@@ -57,15 +50,15 @@ export default function Home() {
         <h2>Experience</h2>
         <ul>
           <li>
-            <div className="item-title">Self-Employed</div>
+            <div className="item-title">Self-directed products & open source</div>
             <div className="item-meta">
-              Freelance Full-Stack & AI Developer • May 2025 - Present
+              Independent Software Engineer • Aug 2025 - Present
             </div>
             <p>
-              Build and ship end-to-end web and mobile applications for clients
-              using Next.js, React Native, Hono, Node.js, and PostgreSQL. Design
-              scalable tRPC/REST APIs with JWT auth, RBAC, and distributed job
-              queues (BullMQ/Redis).
+              Sole engineer on every project below - architecture,
+              implementation, deployment, and on-call for my own bugs. Go,
+              Node.js/TypeScript, Python, PostgreSQL, MongoDB, Redis, BullMQ,
+              Docker, AWS.
             </p>
           </li>
           <li>
@@ -76,7 +69,8 @@ export default function Home() {
             <p>
               Profiled PostgreSQL query execution plans and implemented
               connection pooling, reducing API response time by 30%. Built
-              Node.js/Express REST APIs following secure coding best practices.
+              Node.js/Express REST APIs with JWT auth middleware, input
+              validation, and schema design.
             </p>
           </li>
           <li>
@@ -97,14 +91,55 @@ export default function Home() {
         <h2>Projects</h2>
         <ul>
           <li>
+            <div className="item-title">REEVE</div>
+            <div className="item-meta">
+              2026 • Python, FastAPI, asyncio, GitPython, Docker
+            </div>
+            <p>
+              Concurrent PR review backend (GitHub App). HMAC-verified webhook
+              returns 202 in milliseconds and hands off to a background worker;
+              each job checks the repo out into an isolated git worktree. Four
+              reviewers fan out per file under a concurrency ceiling.
+              Precision/recall eval harness with planted defects; 431 tests.
+              <a
+                href="https://github.com/VINODvoid/review-agent"
+                target="_blank"
+                style={{ marginLeft: "0.5rem", fontSize: "0.85rem" }}
+              >
+                [Source]
+              </a>
+            </p>
+          </li>
+          <li>
+            <div className="item-title">TREEQ</div>
+            <div className="item-meta">2026 • Python, NumPy</div>
+            <p>
+              Reimplementation of the Rumelhart, Hinton & Williams (1986)
+              kinship task — forward pass, backprop, and training loop written
+              from scratch on NumPy, no autograd. Trains on 132 relations over
+              two isomorphic family trees and compares a 24-unit representation
+              against a 6-unit bottleneck; the narrow one generalises better
+              (0.583 vs 0.417 test) and invents structure like generation and
+              nationality on its own. Gradients verified against finite
+              differences.
+              <a
+                href="https://github.com/VINODvoid/treeq"
+                target="_blank"
+                style={{ marginLeft: "0.5rem", fontSize: "0.85rem" }}
+              >
+                [Source]
+              </a>
+            </p>
+          </li>
+          <li>
             <div className="item-title">CORTEX</div>
             <div className="item-meta">
               2026 • TypeScript, Bun, React Native, Solana
             </div>
             <p>
-              Autonomous Multi-Agent AI System. Designed a swarm of 10
-              specialized AI agents with a 5-stage pipeline. Built real-time
-              WebSocket pipeline and integrated Solana MWA.
+              10-agent consensus system. Agent output streams over WebSocket
+              to a React Native client with Solana Mobile Wallet Adapter
+              integration. Shipped solo in 3 weeks.
               <a
                 href="https://github.com/VINODvoid/cortex"
                 target="_blank"
@@ -116,13 +151,12 @@ export default function Home() {
           </li>
           <li>
             <div className="item-title">REFLEX</div>
-            <div className="item-meta">
-              2025 • Hono, BullMQ, Redis, PostgreSQL
-            </div>
+            <div className="item-meta">2026 • Go (chi, pgx), PostgreSQL</div>
             <p>
-              DeFi Position Alert Monitor. Multi-chain alert system with
-              real-time BullMQ/Redis job queue and Prisma-managed PostgreSQL
-              schema.
+              Multi-chain DeFi liquidation monitor. Alert workers are
+              queue-isolated so one failing channel can&apos;t stall the
+              pipeline. Rewritten from TypeScript/Hono/BullMQ to Go for lower
+              memory use and predictable latency under continuous polling.
               <a
                 href="https://github.com/VINODvoid/reflex"
                 target="_blank"
@@ -133,59 +167,20 @@ export default function Home() {
             </p>
           </li>
           <li>
-            <div className="item-title">Pluffy AI</div>
+            <div className="item-title">SIGIL</div>
             <div className="item-meta">
-              2025 • Next.js, TypeScript, Node.js, PostgreSQL
+              2026 • Next.js, TypeScript SDK, Anchor (Rust), Helius
             </div>
             <p>
-              LLM Code Generation Platform. Integrated LLM API for real-time
-              code generation and implemented per-user rate limiting.
+              Identity and scoped-permission layer for AI agents. Capability
+              scoping, per-transaction and daily spend limits, and trust scores
+              checked before any agent action executes. SDK published to npm.
               <a
-                href="https://github.com/VINODvoid/pluffy"
+                href="https://github.com/sigil-xyz/sigil"
                 target="_blank"
                 style={{ marginLeft: "0.5rem", fontSize: "0.85rem" }}
               >
                 [Source]
-              </a>
-            </p>
-          </li>
-          <li>
-            <div className="item-title">Lumos AI</div>
-            <div className="item-meta">
-              2024 • Next.js, TypeScript, tRPC, Inngest
-            </div>
-            <p>
-              Workflow Orchestration Engine built on Inngest durable execution
-              primitives with state checkpointing across async boundaries.
-              <a
-                href="https://github.com/VINODvoid/lumos.ai"
-                target="_blank"
-                style={{ marginLeft: "0.5rem", fontSize: "0.85rem" }}
-              >
-                [Source]
-              </a>
-            </p>
-          </li>
-        </ul>
-      </section>
-
-      <section id="education">
-        <h2>Education</h2>
-        <ul>
-          <li>
-            <div className="item-title">Brindavan College of Engineering</div>
-            <div className="item-meta">
-              B.Tech in Computer Science • 2021 - 2025 • CGPA: 8.1/10
-            </div>
-            <p>
-              Focused on Core Computer Science: Data Structures, Algorithms,
-              Systems, and Machine Learning.
-              <a
-                href="https://brindavancollege.com/"
-                target="_blank"
-                style={{ marginLeft: "0.5rem", fontSize: "0.85rem" }}
-              >
-                [Link]
               </a>
             </p>
           </li>
@@ -198,8 +193,9 @@ export default function Home() {
           <li>
             <div className="item-title">Osprey (roostorg)</div>
             <p>
-              Contributed to Discord's trust & safety rules engine processing
-              2.3M rules/sec. Used by Discord, Bluesky, and Matrix.org.
+              3 merged PRs to Discord&apos;s trust & safety rules engine (used
+              by Discord, Bluesky, Matrix.org), including Kafka topic retention
+              limits to prevent unbounded disk growth.
               <a
                 href="https://github.com/roostorg/osprey"
                 target="_blank"
@@ -210,23 +206,16 @@ export default function Home() {
             </p>
           </li>
           <li>
-            <div className="item-title">n8n & Onlook</div>
+            <div className="item-title">Mastra (mastra-ai)</div>
             <p>
-              Contributed to fair-code workflow automation (400+ integrations)
-              and Onlook (AI-powered visual React editor).
+              Merged a fix routing observability pricing lookups through the
+              configured model instead of a hardcoded default.
               <a
-                href="https://github.com/n8n-io/n8n"
+                href="https://github.com/mastra-ai/mastra"
                 target="_blank"
                 style={{ marginLeft: "0.5rem", fontSize: "0.85rem" }}
               >
-                [n8n]
-              </a>
-              <a
-                href="https://github.com/onlook-dev/onlook"
-                target="_blank"
-                style={{ marginLeft: "0.5rem", fontSize: "0.85rem" }}
-              >
-                [Onlook]
+                [Source]
               </a>
             </p>
           </li>
@@ -277,13 +266,32 @@ export default function Home() {
         </p>
       </section>
 
+      <section id="education">
+        <h2>Education</h2>
+        <ul>
+          <li>
+            <div className="item-title">Brindavan College of Engineering</div>
+            <div className="item-meta">
+              B.Tech in Computer Science • 2021 - 2025 • CGPA: 8.1/10
+            </div>
+            <p>
+              Focused on Core Computer Science: Data Structures, Algorithms,
+              Systems, and Machine Learning.
+              <a
+                href="https://brindavancollege.com/"
+                target="_blank"
+                style={{ marginLeft: "0.5rem", fontSize: "0.85rem" }}
+              >
+                [Link]
+              </a>
+            </p>
+          </li>
+        </ul>
+      </section>
+
       <section id="interests">
         <h2>Interests</h2>
-        <p>
-          Beyond engineering, I am interested in philosophy, global politics,
-          and gaming. I also enjoy exploring the anime, as well as staying
-          active through long walks.
-        </p>
+        <p>Philosophy, global politics, gaming, anime, and long walks.</p>
       </section>
     </>
   );

@@ -2,8 +2,9 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Kalki",
-  description: "professional portfolio.",
+  title: "Vinod Vardaram",
+  description:
+    "Vinod Vardaram, software engineer in Bangalore. Backend systems and open source.",
 };
 
 export default function RootLayout({
